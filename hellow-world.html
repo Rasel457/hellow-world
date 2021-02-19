@@ -1,12 +1,158 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
 <title>
       first page
 </title>
+<style>
+h2{color:black;
+}
+p{border:2px solid mediumseagreen;
+   padding: 15px;}
+table,td,th{
+	border:2px solid tomato;
+	border-collapse: collapse;
+} 
+.myDiv {
+  border: 5px outset red;
+  background-color: lightblue;
+  text-align: center;
+}  
+</style>
 </head>
-<body>
-  <h1>My first web page.</h1>
-  <h2>My name is Rasel</h2>
+<body bgcolor="powderblue">
+  <h1 style="color:green">My first web page.</h1>
+  <h2><center><u><big>My name is Rasel</big></u></center></h2>
+  
+  <p style="color:blue;"><i>My univercity name is AMERICAN INTERNATIONAL UNIVERSITY.<br>AIUB is one of the best private university in bangladesh</i></p>
+  <div> <a href="https://www.w3schools.com" target="_blank"><b>This is a link</b></a></div>
+  <p title='Computer Science'>I'm a student Department of CS</p>
+  <h1 style="font-size: 25px;color:yellow">program CSE</h1>
+
+  <!--<p>
+  This paragraph                       
+  contains a lot of lines
+  in the source code,
+  but the browser 
+  ignores it.
+  </p><-->
+  <hr>
+  <h1 style="font-family:verdana;">This is a heading</h1>
+  <p style="font-family:courier;font-size:20px;">This is a paragraph.</p>
+  <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+  <h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+  <hr>
+  <img src="user.jpg" alt="Admin image" width=70px hight=80px>
+  <br>
+  <!-- Table create-->
+  <table>
+  	<tr>
+  		<th>First Name</th>
+  		<th>Last Name</th>
+  		<th>Points</th>
+  	</tr>
+  	<tr>
+  		<td>Md.</td>
+  		<td>Rasel</td>
+  		<td>90</td>
+  	</tr>
+  	<tr>
+  		<td>Md.</td>
+  		<td>Rabiul</td>
+  		<td>85</td>
+  	</tr>
+  	<tr>
+  		<td>Abrar</td>
+  		<td>Rayyan</td>
+  		<td>90</td>
+  	</tr>
+  </table><br><br>
+
+  <!--rowspan-->
+  <table>
+  	<tr>
+  		<th>Name:</th>
+  		<td>Bill Gates</td>
+  	</tr>
+  	<tr>
+  		<th rowspan="2">Telephone:</th>
+  		<td>02345004</td>
+
+  	</tr>
+  	<tr>
+  		
+  		<td>02345004</td>
+  		
+  	</tr>
+  </table>
+  <!--Unorder list-->
+  <ul>
+  	<li>item1</li>
+  	<li>item2</li>
+  	<li>item3</li>
+  </ul>
+   <!--order list-->
+  <ol>
+  	<li>item1</li>
+  	<li>item2</li>
+  	<li>item3</li>
+  </ol>
+ <!--order list and unorder list-->
+  <ol>
+  	<li>
+  		semeste 1
+  		<ul>
+  			<li>course 1
+  				<ol>
+  				    <li>MidTerm grade</li>
+  				    <li>FinalTerm grade</li>
+  				</ol>    
+  			</li>
+  			<li>course 2
+  				<ol>
+  				    <li>MidTerm grade</li>
+  				    <li>FinalTerm grade</li>
+  				</ol> 
+  			</li>
+  			<li>course 3
+  				<ol>
+  				    <li>MidTerm grade</li>
+  				    <li>FinalTerm grade</li>
+  				</ol> 
+  			</li>
+  		</ul>
+  	</li>
+  	<li>semester 2
+  		<ul>
+  			<li>course 1</li>
+  			<li>course 2</li>
+  			<li>course 3</li>
+  		</ul>
+  	</li>
+  
+  </ol>
+
+  <!--Class and Id-->
+  <h1>The div element</h1>
+  <div class="myDiv">
+     <h2>This is a heading in a div element</h2>
+     <p>This is some text in a div element.</p>
+  </div>
+
+  <h1 id="myHeader">Hello World!</h1>
+  <button onclick="displayResult()">Change text</button>
+
+<script>
+function displayResult() {
+  var text = document.getElementById("myHeader");
+  text.innerHTML = "Have a nice day!";
+  text.style.color="tomato";
+}
+</script>
+
+
+
+ 
 </body>
 
 
