@@ -11,7 +11,7 @@
 	<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
 		<p>Basic Information:</p>
 		<label for="firstname">First Name :</label> 
-		<input type="txt" id="firstname" name="fname" value="<?php echo $firstName;?>">
+		<input type="txt" id="firstname" name="fname">
 		<br><br>
 		<label for="lastname">Last Name :</label> 
 		<input type="txt" id="lastname" name="lname">
@@ -48,13 +48,13 @@
          	echo "<h2>Fill up the from properly</h2>";
          }
          else{
-         	$firstName=$_POST['fname'];
-	        $lastName=$_POST['lname'];
+         	$firstName=trim($_POST['fname']);
+	        $lastName=trim($_POST['lname']);
 	        $gender=$_POST['gender'];
-	        $email =$_POST['email'];
-	        $user=$_POST['uname'];
-	        $password=$_POST['password'];
-	        $Remail=$_POST['recemail'];
+	        $email =trim($_POST['email']);
+	        $user=trim($_POST['uname']);
+	        $password=trim($_POST['password']);
+	        $Remail=trim($_POST['recemail']);
 	        echo "<h2>Successfull</h2>";
 	        echo "Firset Name:  $firstName "."<br>";
 	        echo "Last Name:  $lastName "."<br>";
