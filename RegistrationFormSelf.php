@@ -4,10 +4,14 @@
 	<title>Registration form</title>
 </head>
 <body>
+
+
+
+
 	<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
 		<p>Basic Information:</p>
 		<label for="firstname">First Name :</label> 
-		<input type="txt" id="firstname" name="fname">
+		<input type="txt" id="firstname" name="fname" value="<?php echo $firstName;?>">
 		<br><br>
 		<label for="lastname">Last Name :</label> 
 		<input type="txt" id="lastname" name="lname">
@@ -36,13 +40,12 @@
         <input type="Submit" value="Submit">
         <br>
     </form>
-        
-        
+
 
     <?php
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-         if(empty ($_POST['fname']) && empty($_POST['lname'])&&empty($_POST['gender'])&&empty($_POST['email'])&&empty($_POST['uname'])&&empty($_POST['password'])&&empty($_POST['recemail'])){
-         	echo "fill up the from properly";
+         if(empty ($_POST['fname']) || empty($_POST['lname'])||empty($_POST['gender'])||empty($_POST['email'])||empty($_POST['uname'])||empty($_POST['password'])||empty($_POST['recemail'])){
+         	echo "<h2>Fill up the from properly</h2>";
          }
          else{
          	$firstName=$_POST['fname'];
@@ -52,6 +55,7 @@
 	        $user=$_POST['uname'];
 	        $password=$_POST['password'];
 	        $Remail=$_POST['recemail'];
+	        echo "<h2>Successfull</h2>";
 	        echo "Firset Name:  $firstName "."<br>";
 	        echo "Last Name:  $lastName "."<br>";
 	        echo"Gender:  $gender" ."<br>";
@@ -69,6 +73,12 @@
 		
 	}?>
 
+
+        
+
+    
+
+    
 
 	
 
